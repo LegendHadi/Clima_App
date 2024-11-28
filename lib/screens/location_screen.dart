@@ -79,8 +79,14 @@ class _LocationScreenState extends State<LocationScreen> {
                     ),
                   ),
                   ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=> const CityScreen()));
+                    onPressed: () async{
+                      var typedName= await Navigator.push(context, MaterialPageRoute(builder: (context)=> const CityScreen()));
+                      if(typedName != null){
+                        var weatherData= await weather.getCityWeather(typedName);
+                        setState(() {
+                          updateUI(weatherData);
+                        });
+                      }
                     },
                     style: const ButtonStyle(
                     backgroundColor: WidgetStatePropertyAll(Colors.transparent),
