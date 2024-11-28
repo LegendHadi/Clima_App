@@ -26,7 +26,13 @@ class _CityScreenState extends State<CityScreen> {
               Align(
                 alignment: Alignment.topLeft,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  style: const ButtonStyle(
+                    backgroundColor: WidgetStatePropertyAll(Colors.transparent),
+                    shadowColor: WidgetStatePropertyAll(Colors.transparent),
+                  ),
                   child: const Icon(
                     Icons.arrow_back_ios,
                     size: 50.0,
@@ -35,10 +41,20 @@ class _CityScreenState extends State<CityScreen> {
               ),
               Container(
                 padding: const EdgeInsets.all(20.0),
-                child: null,
+                child: const TextField(
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w700,
+                  ),
+                  decoration: kTextFieldInputDecoration,
+                ),
               ),
               ElevatedButton(
                 onPressed: () {},
+                style: const ButtonStyle(
+                  backgroundColor: WidgetStatePropertyAll(Colors.transparent),
+                  shadowColor: WidgetStatePropertyAll(Colors.transparent),
+                ),
                 child: const Text(
                   'Get Weather',
                   style: kButtonTextStyle,

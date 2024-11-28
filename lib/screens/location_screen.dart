@@ -1,3 +1,4 @@
+import 'package:clima_app/screens/city_screen.dart';
 import 'package:clima_app/screens/loading_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:clima_app/utilities/constants.dart';
@@ -68,13 +69,23 @@ class _LocationScreenState extends State<LocationScreen> {
                               builder: (context) => const LoadingScreen())
                       );
                     },
+                    style: const ButtonStyle(
+                    backgroundColor: WidgetStatePropertyAll(Colors.transparent),
+                    shadowColor: WidgetStatePropertyAll(Colors.transparent),
+                    ),
                     child: const Icon(
                       Icons.near_me,
                       size: 50.0,
                     ),
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> const CityScreen()));
+                    },
+                    style: const ButtonStyle(
+                    backgroundColor: WidgetStatePropertyAll(Colors.transparent),
+                    shadowColor: WidgetStatePropertyAll(Colors.transparent),
+                    ),
                     child: const Icon(
                       Icons.location_city,
                       size: 50.0,
