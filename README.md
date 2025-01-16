@@ -1,16 +1,23 @@
-# clima_app
+# Clima_App
 
-A new Flutter project.
+Clima_App is an app for getting information about the weather.
 
-## Getting Started
+In the search box, write your city and press the button to get the temperature and sky status.
 
-This project is a starting point for a Flutter application.
+Additionally, this app can find your current location and provide weather information for it.
 
-A few resources to get you started if this is your first Flutter project:
+# Technology Used
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+In this app, I used Dart and Flutter, along with some packages for API and location:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+• Dart
+
+• Flutter
+
+• HTTP package
+
+• Geolocator package
+
+• Flutter_Spinkit package
+
+https://github.com/user-attachments/assets/c6492c8c-51e0-471b-996a-3bc100788f1e
